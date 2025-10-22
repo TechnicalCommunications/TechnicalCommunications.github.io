@@ -143,6 +143,23 @@ nav a {
     font-size: 0.85rem;
 }
 
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
 nav a::after {
     content: '';
     position: absolute;
