@@ -216,4 +216,23 @@ nav a:hover::after {
     overflow: hidden;
 }
 
+.hero-section h1 {
+    font-size: 4.5rem; /* Increased from default */
+    color: #00D9FF; /* Bright cyan/turquoise color */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.8rem; /* Increased from default */
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .hero
