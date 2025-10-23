@@ -10,7 +10,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N Logo" class="logo">
+            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Technical Communications Logo" class="logo">
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -22,11 +22,17 @@
         <div class="mobile-menu-toggle">&#9776;</div>
     </nav>
 
-    <!-- About Section -->
+    <!-- Hero Section -->
     <header class="hero-section about-hero">
-        <div class="hero-content">
+        <div class="floating-shapes">
+            <div class="floating-shape shape1"></div>
+            <div class="floating-shape shape2"></div>
+            <div class="floating-shape shape3"></div>
+        </div>
+        <div class="hero-content fade-in">
             <h1>About Me</h1>
-            <p>Passionate Technical Writer & Information Architect with 15+ years of experience</p>
+            <p>Passionate Technical Writer & Information Architect with 15+ Years of Experience</p>
+            <a href="contact.html" class="cta-btn">Contact Me</a>
         </div>
     </header>
 
@@ -35,27 +41,27 @@
         <section class="content-card fade-in">
             <h2>Who I Am</h2>
             <p>
-                I am Sandeep B N, a Documentation and Content Strategy expert with over 15 years of experience in technical 
-                writing, content development, and information architecture. I simplify complex technical concepts for 
-                diverse audiences, making content clear, structured, and engaging.
+                I am Sandeep B N, a Documentation and Content Strategy expert with over 15 years of experience
+                in technical writing, content development, and information architecture. I simplify complex
+                concepts to make them accessible to diverse audiences.
             </p>
 
             <h2>Professional Experience</h2>
             <p>
-                I have held leadership roles at Wipro, Tech Mahindra, and MindTree, managing large-scale documentation projects, 
-                leading cross-functional teams, and developing user-focused content strategies.
+                Leadership roles at Wipro, Tech Mahindra, and MindTree allowed me to manage large-scale documentation
+                projects, lead cross-functional teams, and create user-focused content strategies.
             </p>
 
             <h2>Freelance Work</h2>
             <p>
-                As a freelancer, I deliver tailored content solutions for global clients, including scalable documentation systems, 
-                content frameworks, and intuitive information architectures.
+                I have worked as a freelancer for global clients, delivering scalable content frameworks,
+                building documentation systems, and designing intuitive information architectures.
             </p>
 
             <h2>My Philosophy</h2>
             <p>
-                My core focus is on designing structured, user-friendly documentation that supports both technical and non-technical audiences. 
-                I aim to help businesses communicate effectively and create exceptional user experiences.
+                My focus is designing content that enhances user experience. I build structured, user-friendly
+                documentation to help businesses communicate effectively and deliver valuable information.
             </p>
         </section>
     </main>
@@ -67,10 +73,12 @@
 
     <!-- Scripts -->
     <script>
+        // Mobile menu toggle
         const toggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
+        // Fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
         const appearOnScroll = new IntersectionObserver((entries, observer) => {
