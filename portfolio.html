@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio | Sandeep B N</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sandeep B N</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Navigation with Accessibility -->
-    <nav aria-label="Main Navigation">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N - Technical Communications Logo" class="logo">
+            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N Logo" class="logo">
         </div>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-menu-toggle">&#9776;</div>
     </nav>
 
-    <!-- Portfolio Section -->
-    <h1>Portfolio / Projects</h1>
+    <!-- Hero Section -->
+    <header class="hero-section portfolio-hero">
+        <div class="hero-content">
+            <h1>Portfolio</h1>
+            <p>Showcasing Projects that Deliver Clear, User-Centric Documentation</p>
+        </div>
+    </header>
 
-    <div class="content-card">
-        <p>Below are some of the notable projects I have worked on:</p>
-        <ul>
-            <li><strong>Project 1:</strong> Redesigned the developer documentation taxonomy for PayPal, improving navigation and user engagement.</li>
-            <li><strong>Project 2:</strong> Developed a comprehensive content model for over 500 API endpoints at Utimaco, ensuring consistency and clarity.</li>
-            <li><strong>Project 3:</strong> Conducted a full documentation audit and implemented a style guide for HPE, streamlining content creation and enhancing readability.</li>
-        </ul>
+    <!-- Main Content -->
+    <main>
+        <section class="content-card fade-in">
+            <p>Below are some notable projects I have contributed to:</p>
+            <ul>
+                <li><strong>PayPal:</strong> Redesigned developer documentation taxonomy for improved navigation and engagement.</li>
+                <li><strong>Utimaco:</strong> Built a content model for 500+ API endpoints ensuring clarity and consistency.</li>
+                <li><strong>HPE:</strong> Conducted a documentation audit and implemented a style guide for better readability.</li>
+            </ul>
 
-        <p>Each project reflects my commitment to structuring complex information for better usability, clarity, and discoverability.</p>
+            <h2>Portfolio Highlights</h2>
+            <ul>
+                <li><strong>Software Documentation:</strong> User guides, manuals, and release notes for seamless adoption.</li>
+                <li><strong>API Documentation:</strong> Developer-friendly integration guides for smooth API usage.</li>
+                <li><strong>Knowledge Base & Help Centers:</strong> Searchable, well-structured content for self-service solutions.</li>
+                <li><strong>Technical Blogs & Tutorials:</strong> SEO-optimized content that educates technical audiences.</li>
+                <li><strong>Compliance & SOP Documentation:</strong> Ensuring regulatory compliance and organizational consistency.</li>
+                <li><strong>UI/UX Content:</strong> Clear microcopy and interface text for improved user interaction.</li>
+                <li><strong>Training Materials & White Papers:</strong> Thought leadership and instructional content.</li>
+                <li><strong>Localization & Accessibility:</strong> Inclusive content ready for diverse global audiences.</li>
+            </ul>
+        </section>
+    </main>
 
-        <h2>Portfolio Highlights</h2>
-        <ul>
-            <li><strong>Software Documentation:</strong> Comprehensive user guides, installation manuals, and release notes for enterprise applications, ensuring seamless adoption and understanding.</li>
-            <li><strong>API Documentation:</strong> Developer-friendly integration guides and technical references that streamline API adoption and usage.</li>
-            <li><strong>Knowledge Base & Help Centers:</strong> Well-organized, searchable content designed to empower customers with self-service solutions.</li>
-            <li><strong>Technical Blogs & Tutorials:</strong> SEO-optimized articles and detailed step-by-step guides crafted to engage and educate technical audiences.</li>
-            <li><strong>Compliance & SOP Documentation:</strong> Industry-standard documentation ensuring regulatory compliance and organizational consistency.</li>
-            <li><strong>UI/UX Content:</strong> Clear and concise microcopy and interface text for web and mobile applications, improving user interaction and experience.</li>
-            <li><strong>Training Materials & White Papers:</strong> Instructional content and thought leadership articles that educate and inform, supporting both internal teams and external audiences.</li>
-            <li><strong>Localization & Accessibility:</strong> Global-ready, inclusive content tailored to meet the needs of diverse audiences, ensuring accessibility across regions and abilities.</li>
-        </ul>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Technical Communications | Designed by Sandeep B N</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
 </body>
 </html>
