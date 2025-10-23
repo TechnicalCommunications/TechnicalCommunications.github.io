@@ -10,7 +10,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N Logo" class="logo">
+            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Technical Communications Logo" class="logo">
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -24,32 +24,51 @@
 
     <!-- Hero Section -->
     <header class="hero-section portfolio-hero">
-        <div class="hero-content">
+        <div class="floating-shapes">
+            <div class="floating-shape shape1"></div>
+            <div class="floating-shape shape2"></div>
+            <div class="floating-shape shape3"></div>
+        </div>
+        <div class="hero-content fade-in">
             <h1>Portfolio</h1>
-            <p>Showcasing Projects that Deliver Clear, User-Centric Documentation</p>
+            <p>Showcasing Projects that Simplify Complex Information</p>
+            <a href="contact.html" class="cta-btn">Hire Me</a>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Portfolio Projects -->
     <main>
         <section class="content-card fade-in">
-            <p>Below are some notable projects I have contributed to:</p>
-            <ul>
-                <li><strong>PayPal:</strong> Redesigned developer documentation taxonomy for improved navigation and engagement.</li>
-                <li><strong>Utimaco:</strong> Built a content model for 500+ API endpoints ensuring clarity and consistency.</li>
-                <li><strong>HPE:</strong> Conducted a documentation audit and implemented a style guide for better readability.</li>
-            </ul>
+            <h2>Selected Projects</h2>
+            <p>Below are notable projects demonstrating my expertise in technical communications:</p>
+
+            <div class="project-card fade-in">
+                <h3>Project 1: PayPal Documentation Redesign</h3>
+                <p>Improved developer documentation taxonomy, enhancing navigation and user engagement.</p>
+            </div>
+
+            <div class="project-card fade-in">
+                <h3>Project 2: Utimaco API Documentation</h3>
+                <p>Developed a content model for 500+ API endpoints, ensuring consistency and clarity.</p>
+            </div>
+
+            <div class="project-card fade-in">
+                <h3>Project 3: HPE Documentation Audit</h3>
+                <p>Conducted a full documentation audit, implemented a style guide, and enhanced readability.</p>
+            </div>
+
+            <div class="section-divider"></div>
 
             <h2>Portfolio Highlights</h2>
             <ul>
-                <li><strong>Software Documentation:</strong> User guides, manuals, and release notes for seamless adoption.</li>
-                <li><strong>API Documentation:</strong> Developer-friendly integration guides for smooth API usage.</li>
-                <li><strong>Knowledge Base & Help Centers:</strong> Searchable, well-structured content for self-service solutions.</li>
-                <li><strong>Technical Blogs & Tutorials:</strong> SEO-optimized content that educates technical audiences.</li>
-                <li><strong>Compliance & SOP Documentation:</strong> Ensuring regulatory compliance and organizational consistency.</li>
-                <li><strong>UI/UX Content:</strong> Clear microcopy and interface text for improved user interaction.</li>
-                <li><strong>Training Materials & White Papers:</strong> Thought leadership and instructional content.</li>
-                <li><strong>Localization & Accessibility:</strong> Inclusive content ready for diverse global audiences.</li>
+                <li>Comprehensive software user guides and manuals</li>
+                <li>Developer-friendly API references</li>
+                <li>Knowledge base and help center design</li>
+                <li>SEO-optimized technical blogs and tutorials</li>
+                <li>Compliance and SOP documentation</li>
+                <li>UI/UX microcopy for web and mobile apps</li>
+                <li>Training materials and white papers</li>
+                <li>Localization & accessibility-focused content</li>
             </ul>
         </section>
     </main>
@@ -61,10 +80,12 @@
 
     <!-- Scripts -->
     <script>
+        // Mobile menu toggle
         const toggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
+        // Fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
         const appearOnScroll = new IntersectionObserver((entries, observer) => {
