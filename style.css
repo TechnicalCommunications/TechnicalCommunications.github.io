@@ -1,3 +1,4 @@
+
 /* ========================================
    UPMARKET PROFESSIONAL DESIGN - ENHANCED
    Glossy finish with animated backgrounds
@@ -216,196 +217,26 @@ nav a:hover::after {
     overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    animation: float 20s ease-in-out infinite;
-}
-
 .hero-section h1 {
-    color: white;
-    font-size: 4rem;
+    font-size: 4.5rem; /* Increased from default */
+    color: #00D9FF; /* Bright cyan/turquoise color */
+    font-weight: 700;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
-    font-weight: 900;
-    position: relative;
-    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
 }
 
 .hero-section p {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.3rem;
-    max-width: 800px;
+    font-size: 1.8rem; /* Increased from default */
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    max-width: 900px;
     margin: 0 auto;
-    line-height: 1.8;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1;
 }
 
-/* ========================================
-   TYPOGRAPHY WITH DEPTH
-   ======================================== */
-h1, h2, h3 {
-    color: var(--heading-color);
-    font-weight: 800;
-}
+.hero
 
-h1 {
-    font-size: 3rem;
-    margin: 2.5rem 0 1.5rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
-h2 {
-    font-size: 2rem;
-    margin: 2rem 0 1rem;
-    border-left: 5px solid;
-    border-image: linear-gradient(180deg, #667eea, #764ba2) 1;
-    padding-left: 1.5rem;
-}
 
-/* ========================================
-   CONTACT SECTION WITH GLOSSY EFFECT
-   ======================================== */
-.contact-info {
-    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    color: white;
-    padding: 3.5rem;
-    border-radius: 20px;
-    margin: 2rem 0;
-    box-shadow: 
-        0 10px 40px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-info::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E");
-    animation: float 25s ease-in-out infinite;
-}
-
-.contact-info h1, .contact-info h2, .contact-info p {
-    color: white;
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================================
-   FLOATING SHAPES FOR VISUAL INTEREST
-   ======================================== */
-@keyframes floatShape {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    33% { transform: translate(30px, -30px) rotate(120deg); }
-    66% { transform: translate(-20px, 20px) rotate(240deg); }
-}
-
-/* ========================================
-   LISTS WITH STYLE
-   ======================================== */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    padding: 0.75rem 0;
-    padding-left: 2.5rem;
-    position: relative;
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-ul li::before {
-    content: '●';
-    position: absolute;
-    left: 0.5rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-/* ========================================
-   PROJECT ITEMS WITH GRADIENT ACCENT
-   ======================================== */
-.project-item {
-    border-left: 5px solid;
-    border-image: linear-gradient(180deg, #667eea, #764ba2, #f093fb) 1;
-}
-
-/* ========================================
-   PAGE CONTAINER & RESPONSIVE
-   ======================================== */
-body > * {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2.5rem;
-}
-
-nav {
-    max-width: 100%;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
-
-@media (max-width: 768px) {
-    .logo { height: 60px !important; }
-    .hero-section h1 { font-size: 2.5rem; }
-    h1 { font-size: 2rem; }
-    nav a { margin: 0 0.5rem; padding: 0.5rem 0.75rem; }
-    body::before, body::after { animation: none; }
-}
-
-/* ========================================
-   SMOOTH SCROLLING & SELECTION
-   ======================================== */
-html {
-    scroll-behavior: smooth;
-}
-
-::selection {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-}
-
-/* ========================================
-   ABOUT PAGE - ALL PAGES GET SAME TREATMENT
-   ======================================== */
-p {
-    margin-bottom: 1.25rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-strong {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-/* Additional glossy effects */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
