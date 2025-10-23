@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact | Sandeep B N</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sandeep B N</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Navigation -->
-    <nav aria-label="Main Navigation">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N - Technical Communications Logo" class="logo">
+            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N Logo" class="logo">
         </div>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-menu-toggle">&#9776;</div>
     </nav>
 
-    <!-- Contact Section -->
-    <h1>Contact Me</h1>
-    <p>If you'd like to work together or discuss a project, feel free to reach out to me through any of the following channels:</p>
+    <!-- Hero Section -->
+    <header class="hero-section contact-hero">
+        <div class="hero-content">
+            <h1>Contact Me</h1>
+            <p>Let's Connect and Discuss Your Project</p>
+        </div>
+    </header>
 
-    <div class="content-card">
-        <ul>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/technical-communications-953578393/" target="_blank" rel="noopener noreferrer">technical-communications-953578393</a></li>
-            <li><strong>Email:</strong> <a href="mailto:sandeepbn.wipro@outlook.com">sandeepbn.wipro@outlook.com</a></li>
-        </ul>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <section class="content-card fade-in">
+            <p>If you'd like to work together or discuss a project, fill out the form below or reach out via LinkedIn or Email.</p>
 
+            <form class="contact-form" action="mailto:sandeepbn.wipro@outlook.com" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project or inquiry subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+
+            <div class="contact-links">
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/technical-communications-953578393/" target="_blank" rel="noopener noreferrer">technical-communications-953578393</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sandeepbn.wipro@outlook.com">sandeepbn.wipro@outlook.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Technical Communications | Designed by Sandeep B N</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
 </body>
 </html>
