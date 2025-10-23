@@ -10,7 +10,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Sandeep B N Logo" class="logo">
+            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Technical Communications Logo" class="logo">
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -24,20 +24,26 @@
 
     <!-- Hero Section -->
     <header class="hero-section services-hero">
-        <div class="hero-content">
-            <h1>Our Services</h1>
-            <p>Helping Organizations Communicate Clearly and Effectively</p>
+        <div class="floating-shapes">
+            <div class="floating-shape shape1"></div>
+            <div class="floating-shape shape2"></div>
+            <div class="floating-shape shape3"></div>
+        </div>
+        <div class="hero-content fade-in">
+            <h1>Services</h1>
+            <p>Comprehensive Technical Communication Solutions</p>
+            <a href="contact.html" class="cta-btn">Get Started</a>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Services Section -->
     <main>
         <section class="content-card fade-in">
-            <p>We offer a range of services to meet your documentation and content strategy needs:</p>
+            <h2>What I Offer</h2>
+            <p>We provide a wide range of services to meet the unique needs of each project, combining clarity, scalability, and usability:</p>
 
-            <div class="service-item">
-                <h2>Technical Writing & Documentation</h2>
-                <p>Precise, user-friendly documentation including:</p>
+            <div class="service-item fade-in">
+                <h3>Technical Writing & Documentation</h3>
                 <ul>
                     <li>User guides and manuals</li>
                     <li>API documentation and integration guides</li>
@@ -46,53 +52,48 @@
                 </ul>
             </div>
 
-            <div class="service-item">
-                <h2>Content Development</h2>
-                <p>Engaging content that resonates with your audience:</p>
+            <div class="service-item fade-in">
+                <h3>Content Development</h3>
                 <ul>
                     <li>Blogs and tutorials</li>
-                    <li>White papers and thought leadership</li>
+                    <li>White papers and thought leadership pieces</li>
                     <li>SEO-optimized marketing content</li>
                 </ul>
             </div>
 
-            <div class="service-item">
-                <h2>Information Architecture</h2>
-                <p>Designing scalable, intuitive content structures:</p>
+            <div class="service-item fade-in">
+                <h3>Information Architecture</h3>
                 <ul>
-                    <li>Website and app content structures</li>
-                    <li>Enterprise content management systems</li>
-                    <li>Taxonomy and categorization strategies</li>
+                    <li>Content structure design for web and mobile apps</li>
+                    <li>Enterprise-level content management</li>
+                    <li>Taxonomy development and categorization</li>
                 </ul>
             </div>
 
-            <div class="service-item">
-                <h2>Design & UX Writing</h2>
-                <p>Enhancing user experience with clear, actionable content:</p>
+            <div class="service-item fade-in">
+                <h3>Design & UX Writing</h3>
                 <ul>
                     <li>Interface text, microcopy, and tooltips</li>
-                    <li>Content integrated into product design</li>
-                    <li>Guiding users with actionable instructions</li>
+                    <li>Clear, actionable user guidance</li>
+                    <li>Content integrated with product design</li>
                 </ul>
             </div>
 
-            <div class="service-item">
-                <h2>Content Strategy & Management</h2>
-                <p>Building scalable strategies aligned with business goals:</p>
+            <div class="service-item fade-in">
+                <h3>Content Strategy & Management</h3>
                 <ul>
-                    <li>Content strategy development</li>
-                    <li>Organizing and maintaining content</li>
+                    <li>Content planning for short- and long-term goals</li>
+                    <li>Consistency and scalability management</li>
                     <li>Editorial calendars and workflow optimization</li>
                 </ul>
             </div>
 
-            <div class="service-item">
-                <h2>Training & Consulting</h2>
-                <p>Workshops and consulting to improve content workflows:</p>
+            <div class="service-item fade-in">
+                <h3>Training & Consulting</h3>
                 <ul>
-                    <li>Documentation best practices</li>
-                    <li>Content management consulting</li>
-                    <li>Process optimization workshops</li>
+                    <li>Workshops on documentation best practices</li>
+                    <li>Consulting on content governance</li>
+                    <li>Streamlining content creation and review processes</li>
                 </ul>
             </div>
         </section>
@@ -105,10 +106,12 @@
 
     <!-- Scripts -->
     <script>
+        // Mobile menu toggle
         const toggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
+        // Fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
         const appearOnScroll = new IntersectionObserver((entries, observer) => {
