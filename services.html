@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Sandeep B N</title>
+    <title>Contact | Sandeep B N</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,78 +23,43 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section services-hero">
+    <header class="hero-section contact-hero">
         <div class="floating-shapes">
             <div class="floating-shape shape1"></div>
             <div class="floating-shape shape2"></div>
             <div class="floating-shape shape3"></div>
         </div>
         <div class="hero-content fade-in">
-            <h1>Services</h1>
-            <p>Comprehensive Technical Communication Solutions</p>
-            <a href="contact.html" class="cta-btn">Get Started</a>
+            <h1>Contact Me</h1>
+            <p>Let's Connect and Discuss Your Project</p>
         </div>
     </header>
 
-    <!-- Services Section -->
+    <!-- Contact Form Section -->
     <main>
         <section class="content-card fade-in">
-            <h2>What I Offer</h2>
-            <p>We provide a wide range of services to meet the unique needs of each project, combining clarity, scalability, and usability:</p>
+            <h2>Get in Touch</h2>
+            <p>Fill out the form below, or reach me through LinkedIn or email:</p>
 
-            <div class="service-item fade-in">
-                <h3>Technical Writing & Documentation</h3>
-                <ul>
-                    <li>User guides and manuals</li>
-                    <li>API documentation and integration guides</li>
-                    <li>Release notes and product updates</li>
-                    <li>Knowledge bases for customer support</li>
-                </ul>
-            </div>
+            <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <div class="service-item fade-in">
-                <h3>Content Development</h3>
-                <ul>
-                    <li>Blogs and tutorials</li>
-                    <li>White papers and thought leadership pieces</li>
-                    <li>SEO-optimized marketing content</li>
-                </ul>
-            </div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-            <div class="service-item fade-in">
-                <h3>Information Architecture</h3>
-                <ul>
-                    <li>Content structure design for web and mobile apps</li>
-                    <li>Enterprise-level content management</li>
-                    <li>Taxonomy development and categorization</li>
-                </ul>
-            </div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project / Inquiry Subject" required>
 
-            <div class="service-item fade-in">
-                <h3>Design & UX Writing</h3>
-                <ul>
-                    <li>Interface text, microcopy, and tooltips</li>
-                    <li>Clear, actionable user guidance</li>
-                    <li>Content integrated with product design</li>
-                </ul>
-            </div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
 
-            <div class="service-item fade-in">
-                <h3>Content Strategy & Management</h3>
-                <ul>
-                    <li>Content planning for short- and long-term goals</li>
-                    <li>Consistency and scalability management</li>
-                    <li>Editorial calendars and workflow optimization</li>
-                </ul>
-            </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
 
-            <div class="service-item fade-in">
-                <h3>Training & Consulting</h3>
-                <ul>
-                    <li>Workshops on documentation best practices</li>
-                    <li>Consulting on content governance</li>
-                    <li>Streamlining content creation and review processes</li>
-                </ul>
+            <div class="contact-links fade-in">
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/technical-communications-953578393/" target="_blank" rel="noopener noreferrer">technical-communications-953578393</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sandeepbn.wipro@outlook.com">sandeepbn.wipro@outlook.com</a></p>
             </div>
         </section>
     </main>
