@@ -4,8 +4,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Specify the location of the sitemap for better crawling
 Sitemap: https://technicalcommunications.github.io/sitemap.xml
 
-# Crawl delay (optional - for politeness)
-Crawl-delay: 1        
+# Crawl delay to avoid overloading the server (optional)
+Crawl-delay: 1
