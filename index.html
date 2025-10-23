@@ -5,49 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Communications | Expert Documentation & Information Architecture</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional Technical Writer & Information Architect with 15+ years experience. Specializing in documentation systems, API docs, content strategy, and user-centric solutions. Available for hire.">
-    <meta name="keywords" content="Technical Writer, Technical Communications, Documentation, Information Architecture, Content Strategy, API Documentation, User Experience, Sandeep B N">
-    <meta name="author" content="Sandeep B N">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://technicalcommunications.github.io/">
-    <meta property="og:title" content="Technical Communications | Expert Documentation & Information Architecture">
-    <meta property="og:description" content="Professional Technical Writer with 15+ years experience in documentation systems, API docs, and content strategy. Let's work together!">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sandeep B N",
-      "jobTitle": "Technical Writer & Information Architect",
-      "url": "https://technicalcommunications.github.io/",
-      "sameAs": ["https://technicalcommunications.github.io/"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bangalore",
-        "addressCountry": "IN"
-      },
-      "description": "Professional Technical Writer with 15+ years experience in documentation systems, content strategy, and information architecture",
-      "email": "sandeepbn.wipro@outlook.com"
-    }
-    </script>
 </head>
 <body>
-    <!-- Floating Background Shapes -->
-    <div class="floating-shapes">
-        <div class="floating-shape shape1"></div>
-        <div class="floating-shape shape2"></div>
-        <div class="floating-shape shape3"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo-container">
@@ -64,47 +23,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-content">
+    <header class="hero-section index-hero">
+        <div class="floating-shapes">
+            <div class="floating-shape shape1"></div>
+            <div class="floating-shape shape2"></div>
+            <div class="floating-shape shape3"></div>
+        </div>
+        <div class="hero-content fade-in">
             <h1>Technical Communications</h1>
             <p>Transforming Complex Information into Clear, Accessible Documentation</p>
             <a href="contact.html" class="cta-btn">Get in Touch</a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="content-card fade-in">
-            <h2>Crafting Seamless User Experiences through Documentation</h2>
-            <p>
-                At Technical Communications, we specialize in crafting clear, structured, and scalable 
-                documentation systems, content models, and information architectures that empower 
-                technology teams and organizations. With a focus on user-centric solutions, we create 
-                streamlined content strategies and modular frameworks designed to make complex 
-                technical information accessible and engaging.
-            </p>
-            <p>
-                Our expertise spans building comprehensive documentation, collaborating with 
-                cross-functional teams, and delivering seamless user experiences. Whether you're 
-                looking to optimize your documentation processes, enhance content discoverability, 
-                or ensure that your information is easy to navigate, we provide the tools and 
-                strategies you need for success.
-            </p>
+    <!-- Core Expertise Section -->
+    <section class="content-card fade-in">
+        <h2>Crafting Seamless User Experiences through Documentation</h2>
+        <p>
+            We specialize in clear, structured, and scalable documentation systems, content models, 
+            and information architectures that empower technology teams and organizations.
+        </p>
 
-            <div class="section-divider"></div>
-            
-            <p><strong>Core Expertise:</strong></p>
-            <div class="skills-container">
-                <span class="skill-badge">Technical Writing</span>
-                <span class="skill-badge">Documentation Systems</span>
-                <span class="skill-badge">Information Architecture</span>
-                <span class="skill-badge">Content Strategy</span>
-                <span class="skill-badge">User Experience</span>
-                <span class="skill-badge">API Documentation</span>
-            </div>
-            <p><strong>Let us help you communicate better and build stronger connections with your audience.</strong></p>
-        </section>
-    </main>
+        <div class="section-divider"></div>
+
+        <h3>Core Expertise</h3>
+        <div class="skills-container">
+            <span class="skill-badge">Technical Writing</span>
+            <span class="skill-badge">Documentation Systems</span>
+            <span class="skill-badge">Information Architecture</span>
+            <span class="skill-badge">Content Strategy</span>
+            <span class="skill-badge">User Experience</span>
+            <span class="skill-badge">API Documentation</span>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -113,11 +64,12 @@
 
     <!-- Scripts -->
     <script>
+        // Mobile menu toggle
         const toggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
-        // Fade-in animation on scroll
+        // Fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
         const appearOnScroll = new IntersectionObserver((entries, observer) => {
