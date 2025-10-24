@@ -9,77 +9,123 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo-container">
-            <img src="fac5670d-32cc-4a21-acb5-98d145f63495.png" alt="Technical Communications Logo" class="logo">
+        <div class="container">
+            <div class="nav-brand">Technical Communications</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="mobile-menu-toggle">&#9776;</div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section index-hero">
-        <div class="floating-shapes">
-            <div class="floating-shape shape1"></div>
-            <div class="floating-shape shape2"></div>
-            <div class="floating-shape shape3"></div>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Technical Communications</h1>
+                <p class="hero-subtitle">Transforming Complex Information into Clear, Accessible Documentation</p>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
         </div>
-        <div class="hero-content fade-in">
-            <h1>Technical Communications</h1>
-            <p>Transforming Complex Information into Clear, Accessible Documentation</p>
-            <a href="contact.html" class="cta-btn">Get in Touch</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">
+                I specialize in creating clear, structured, and scalable documentation systems, 
+                content models, and information architectures that empower technology teams and organizations.
+                With expertise in technical writing and user experience design, I help bridge the gap 
+                between complex technology and end users.
+            </p>
         </div>
-    </header>
+    </section>
 
-    <!-- Core Expertise Section -->
-    <section class="content-card fade-in">
-        <h2>Crafting Seamless User Experiences through Documentation</h2>
-        <p>
-            We specialize in clear, structured, and scalable documentation systems, content models, 
-            and information architectures that empower technology teams and organizations.
-        </p>
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Technical Writing</h3>
+                    <p>Clear and concise documentation for technical products and services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Documentation Systems</h3>
+                    <p>Structured documentation frameworks that scale with your organization</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Information Architecture</h3>
+                    <p>Organizing complex information for optimal user understanding</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Content Strategy</h3>
+                    <p>Strategic planning for content creation and management</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>User Experience</h3>
+                    <p>Crafting seamless user experiences through documentation</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3>API Documentation</h3>
+                    <p>Comprehensive API guides and reference documentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="section-divider"></div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-description">
+                Showcasing my expertise in designing clear, structured, and scalable documentation systems, 
+                content models, and information architectures for technology teams and organizations.
+            </p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Enterprise Documentation System</h3>
+                    <p>Designed and implemented a comprehensive documentation platform for a Fortune 500 company</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>API Reference Guide</h3>
+                    <p>Created detailed API documentation with interactive examples and tutorials</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>User Manual Series</h3>
+                    <p>Developed user-friendly manuals for complex software products</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h3>Core Expertise</h3>
-        <div class="skills-container">
-            <span class="skill-badge">Technical Writing</span>
-            <span class="skill-badge">Documentation Systems</span>
-            <span class="skill-badge">Information Architecture</span>
-            <span class="skill-badge">Content Strategy</span>
-            <span class="skill-badge">User Experience</span>
-            <span class="skill-badge">API Documentation</span>
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-description">
+                Interested in collaborating? Let's discuss how I can help your organization 
+                create exceptional documentation.
+            </p>
+            <a href="mailto:contact@technicalcommunications.com" class="btn btn-primary">Contact Me</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>© 2025 Technical Communications | Designed by Sandeep B N</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Technical Communications | Designed by Sandeep B N</p>
+        </div>
     </footer>
-
-    <!-- Scripts -->
-    <script>
-        // Mobile menu toggle
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-        // Fade-in animations
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-        faders.forEach(fader => appearOnScroll.observe(fader));
-    </script>
 </body>
 </html>
